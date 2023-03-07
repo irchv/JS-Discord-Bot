@@ -1,3 +1,4 @@
+require('dotenv').config();
 const {
   Client,
   IntentsBitField,
@@ -21,6 +22,4 @@ client.on('messageCreate', (msg) => {
     msg.reply('Hey!');
   }
 });
-client.login(
-  'MTA4MjM4MTI5MTkzNDE5NTcxMg.Gy5OMg.18ycF6wBdaaYIJVuDpX0BapZ455dcXzzEjqmWQ'
-);
+client.login(process.env.TOKEN);
